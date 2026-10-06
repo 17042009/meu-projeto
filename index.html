@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="VISTA O MOMENTO DE NALOGES — peças com presença para o seu próximo momento." />
+    <title>VISTA O MOMENTO DE NALOGES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--
+      THESIS: Uma curadoria de rua com pulso editorial, não mais um grid silencioso de produtos.
+      OWN-WORLD: Grafite, verde ácido e azul cobalto; tipografia geométrica, etiquetas técnicas e imagem em recorte.
+      STORY: A visitante descobre a nova edição, filtra o que combina com seu ritmo e monta uma seleção própria.
+      FIRST VIEWPORT: Navegação compacta, manifesto à esquerda e imagem de look à direita; o catálogo começa antes da dobra.
+      FORM: Editorial de campanha + catálogo modular, escolhido para dar contexto às peças sem esconder a compra.
+    -->
+    <div class="access-bar">
+      <span class="access-label">Acesso</span>
+      <div class="access-options">
+        <button class="access-link" id="accountToggle">Área do cliente</button>
+        <a class="access-link" href="admin.html">Área do administrador</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ativar modo claro">Modo claro</button>
+      </div>
+    </div>
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="NALOGES, início">NALOGES</a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#catalogo">Novidades</a>
+        <a href="#catalogo">Roupas</a>
+        <a href="#catalogo">Acessórios</a>
+        <a href="#manifesto">Manifesto</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="searchToggle" aria-label="Abrir busca">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+        </button>
+        <button class="saved-button" id="savedToggle" aria-label="Abrir lista comprar depois"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 7H6"></path><circle cx="10" cy="20" r="1.2"></circle><circle cx="18" cy="20" r="1.2"></circle></svg><b id="savedCount">0</b></button>
+        <button class="cart-button" id="cartToggle" aria-label="Abrir carrinho">
+          <span>Bag</span><b id="cartCount">0</b>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="mono-label">Edição 04 / 2024</p>
+          <h1 id="hero-title">Vista o<br /><em>momento.</em></h1>
+          <p class="hero-description">Peças para quem transforma a rua em cenário. Uma nova seleção de formas, texturas e atitude.</p>
+          <a class="button button-lime" href="#catalogo">Explorar a edição <span>↘</span></a>
+        </div>
+        <div class="hero-art">
+          <div class="hero-meta mono-label">NALOGES / LOOK 01</div>
+          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=85" alt="Pessoa usando look escuro em uma rua urbana" />
+          <div class="hero-stamp">FORM<br />FOLLOWS<br />FEELING</div>
+          <div class="hero-caption"><span>01</span> Entre o concreto e o corpo.</div>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Destaques da loja">
+        <div class="ticker-track"><span>FREE SHIPPING ON ORDERS OVER R$ 450</span><i>✳</i><span>MADE FOR YOUR NEXT MOVE</span><i>✳</i><span>FREE SHIPPING ON ORDERS OVER R$ 450</span><i>✳</i></div>
+      </section>
+
+      <section class="daily-drop" aria-labelledby="daily-title">
+        <div class="daily-drop-copy">
+          <p class="mono-label">Destaque de hoje / 25.09</p>
+          <h2 id="daily-title">A novidade<br /><em>do dia.</em></h2>
+          <p>A Jaqueta Offset chegou para quebrar o básico: corte estruturado, textura leve e presença que acompanha qualquer plano.</p>
+          <a class="button button-red" href="#product-1">Ver a novidade <span>↘</span></a>
+        </div>
+        <div class="daily-drop-product">
+          <span class="daily-badge">JUST<br />IN</span>
+          <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=85" alt="Jaqueta Offset, novidade do dia" />
+          <div><strong>Jaqueta Offset</strong><span>R$ 489,00</span></div>
+        </div>
+      </section>
+
+      <section class="gender-categories" aria-label="Categorias de moda">
+        <button class="gender-category gender-female" data-gender="feminino">
+          <span class="mono-label">Coleção 01</span>
+          <strong>Moda<br /><em>feminina</em></strong>
+          <small>Ver coleção ↘</small>
+        </button>
+        <button class="gender-category gender-male" data-gender="masculino">
+          <span class="mono-label">Coleção 02</span>
+          <strong>Moda<br /><em>masculina</em></strong>
+          <small>Ver coleção ↘</small>
+        </button>
+      </section>
+
+      <section class="look-builder" id="monte-seu-look" aria-labelledby="look-builder-title" hidden>
+        <div class="look-builder-heading">
+          <p class="mono-label">Styling room / NALOGES</p>
+          <h2 id="look-builder-title">Monte seu<br /><em>look.</em></h2>
+          <p>Comece pelo seu estilo e descubra peças para combinar do seu jeito.</p>
+          <button class="look-back" id="lookBack">← Voltar para a loja</button>
+        </div>
+        <div class="look-figures">
+          <button class="look-figure look-figure-female" data-gender="feminino" aria-label="Montar look feminino">
+            <span class="figure-label">FEMININO ↘</span>
+            <svg class="fashion-figure" viewBox="0 0 220 360" aria-hidden="true">
+              <ellipse class="figure-head" cx="110" cy="43" rx="22" ry="27"></ellipse>
+              <path class="figure-neck" d="M101 66v14h18V66"></path>
+              <path class="figure-outfit" d="M96 76h28l18 48-12 15H90l-12-15z"></path>
+              <path class="figure-limb" d="M96 83 68 126l13 10 31-29M124 83l28 43-13 10-31-29"></path>
+              <path class="figure-outfit" d="M90 134h40l8 68-18 12H100l-18-12z"></path>
+              <path class="figure-seam" d="M110 135v78M90 164h40"></path>
+              <path class="figure-limb" d="m101 210-11 73M119 210l11 73"></path>
+              <path class="figure-shoe" d="m90 280-17 12q14 11 34 1l-7-13M130 280l-7 13q20 10 34-1l-17-12"></path>
+            </svg>
+            <span class="figure-cta">Ver peças femininas</span>
+          </button>
+          <button class="look-figure look-figure-male" data-gender="masculino" aria-label="Montar look masculino">
+            <span class="figure-label">MASCULINO ↘</span>
+            <svg class="fashion-figure" viewBox="0 0 220 360" aria-hidden="true">
+              <ellipse class="figure-head" cx="110" cy="43" rx="23" ry="27"></ellipse>
+              <path class="figure-neck" d="M99 66v15h22V66"></path>
+              <path class="figure-outfit" d="M92 77h36l18 62-36 15-36-15z"></path>
+              <path class="figure-limb" d="m92 85-32 42 12 12 37-30M128 85l32 42-12 12-37-30"></path>
+              <path class="figure-outfit" d="m92 147h36l8 65-26 10-26-10z"></path>
+              <path class="figure-seam" d="M110 147v75M94 175h32"></path>
+              <path class="figure-limb" d="m101 220-7 63M119 220l7 63"></path>
+              <path class="figure-shoe" d="m94 280-18 12q14 12 35 1l-8-13M126 280l-8 13q21 11 35-1l-18-12"></path>
+            </svg>
+            <span class="figure-cta">Ver peças masculinas</span>
+          </button>
+        </div>
+        <aside class="look-options" aria-label="Opções para montar seu look">
+          <div class="look-options-heading"><p class="mono-label">Personalize</p><h3>Escolha as peças<br />do seu look.</h3></div>
+          <label class="look-select-label">Estilo<select id="lookGender"><option value="feminino">Feminino</option><option value="masculino">Masculino</option></select></label>
+          <div class="look-option-group"><span>Parte de cima</span><div class="look-choice-row"><button class="look-choice active" data-piece-type="top" data-piece-name="Camiseta Signal" data-piece-id="5">Camiseta</button><button class="look-choice" data-piece-type="top" data-piece-name="Jaqueta Offset" data-piece-id="1">Jaqueta</button><button class="look-choice" data-piece-type="top" data-piece-name="Polo District" data-piece-id="13">Polo</button></div></div>
+          <div class="look-option-group"><span>Parte de baixo</span><div class="look-choice-row"><button class="look-choice active" data-piece-type="bottom" data-piece-name="Calça Assembly" data-piece-id="3">Calça</button><button class="look-choice" data-piece-type="bottom" data-piece-name="Saia Kinetic" data-piece-id="7">Saia</button><button class="look-choice" data-piece-type="bottom" data-piece-name="Bermuda Loop" data-piece-id="12">Bermuda</button></div></div>
+          <div class="look-option-group"><span>Detalhe final</span><div class="look-choice-row"><button class="look-choice active" data-piece-type="accessory" data-piece-name="Óculos Vector" data-piece-id="2">Óculos</button><button class="look-choice" data-piece-type="accessory" data-piece-name="Bolsa Transit" data-piece-id="4">Bolsa</button><button class="look-choice" data-piece-type="accessory" data-piece-name="Tênis Relay" data-piece-id="6">Tênis</button></div></div>
+          <div class="look-selected" id="lookSelected">Camiseta Signal + Calça Assembly + Óculos Vector</div>
+          <button class="button button-lime add-look-button" id="addLookToCart">Adicionar look na bag <span>+</span></button>
+        </aside>
+      </section>
+
+      <section class="catalog-section" id="catalogo" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <div><p class="mono-label">Seleção atual</p><h2 id="catalog-title">Escolha seu<br /><span>próximo look.</span></h2></div>
+          <p class="section-note">Peças selecionadas para circular entre o dia e a noite sem pedir licença.</p>
+        </div>
+        <div class="catalog-toolbar">
+          <div class="filters" role="group" aria-label="Filtrar produtos">
+            <button class="filter active" data-filter="todos">Tudo <span>16</span></button>
+            <button class="filter" data-filter="feminino">Feminino <span>07</span></button>
+            <button class="filter" data-filter="masculino">Masculino <span>11</span></button>
+            <button class="filter" data-filter="roupas">Roupas <span>13</span></button>
+            <button class="filter" data-filter="acessorios">Acessórios <span>03</span></button>
+          </div>
+          <label class="search-field"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar na seleção" aria-label="Buscar na seleção" /></label>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="manifesto" id="manifesto">
+        <div class="manifesto-image"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1100&q=85" alt="Pessoa usando casaco estruturado em um ambiente externo" /></div>
+        <div class="manifesto-copy"><p class="mono-label">O que nos move</p><h2>Não é sobre<br /><em>seguir a rua.</em></h2><p>É sobre deixar uma marca nela. NALOGES reúne roupas e objetos para um guarda-roupa que não fica parado — com matéria, contraste e espaço para você escrever o resto.</p><a href="#catalogo" class="text-link">Ler nosso manifesto <span>↗</span></a></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a class="wordmark" href="#">NALOGES</a><p>Vista o momento, desde agora.</p><div class="footer-links"><a href="#">Instagram</a><a href="#">Contato</a><a href="#">Trocas</a><a href="admin.html">Área da Natália</a></div></footer>
+
+    <div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="drawer-backdrop" id="drawerClose"></div>
+      <aside class="drawer-panel" aria-label="Seu carrinho">
+        <div class="drawer-top"><h2>Sua bag <span id="drawerCount">(0)</span></h2><button class="close-button" id="drawerCloseButton" aria-label="Fechar carrinho">×</button></div>
+        <div class="cart-items" id="cartItems"><div class="empty-cart"><span>✳</span><p>Sua seleção ainda está vazia.</p><a href="#catalogo" id="continueShopping">Descobrir peças ↗</a></div></div>
+        <div class="drawer-bottom"><div class="total-row"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div><div class="total-row discount-row"><span>Desconto NALOGES (3%)</span><strong id="cartDiscount">− R$ 0,00</strong></div><div class="total-row final-total"><span>Total para finalizar</span><strong id="cartTotal">R$ 0,00</strong></div><button class="button button-lime checkout-button" id="checkoutButton">Finalizar compra <span>↗</span></button><small>Frete calculado no checkout.</small></div>
+      </aside>
+    </div>
+    <div class="saved-drawer" id="savedDrawer" aria-hidden="true">
+      <div class="drawer-backdrop" id="savedClose"></div>
+      <aside class="drawer-panel" aria-label="Comprar depois">
+        <div class="drawer-top"><h2>Comprar depois <span id="savedDrawerCount">(0)</span></h2><button class="close-button" id="savedCloseButton" aria-label="Fechar lista">×</button></div>
+        <p class="saved-intro">Guarde as peças que você amou. Quando chegar a hora, coloque na sua bag.</p>
+        <div class="saved-items" id="savedItems"><div class="empty-cart"><span>♡</span><p>Você ainda não salvou nenhuma peça.</p><a href="#catalogo" id="savedContinue">Explorar a seleção ↗</a></div></div>
+        <div class="saved-bottom">
+          <div class="saved-total"><span>Total dos produtos</span><strong id="savedProductsTotal">R$ 0,00</strong></div>
+          <div class="saved-total discount-row"><span>Desconto NALOGES (3%)</span><strong id="savedDiscount">− R$ 0,00</strong></div>
+          <div class="saved-total saved-grand-total"><span>Total estimado</span><strong id="savedGrandTotal">R$ 0,00</strong></div>
+          <button class="button button-lime" id="addAllSaved">Adicionar todos à bag <span>+</span></button><button class="button button-red" id="savedCheckout">Ir para a compra <span>↗</span></button>
+        </div>
+        <div class="checkout-modal" id="checkoutModal" aria-hidden="true">
+          <div class="login-backdrop" id="checkoutClose"></div>
+          <section class="checkout-panel" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+            <button class="close-button login-close" id="checkoutCloseButton" aria-label="Fechar finalização">×</button>
+            <p class="mono-label">Última etapa / NALOGES</p>
+            <h2 id="checkoutTitle">Finalize sua<br /><em>compra.</em></h2>
+            <p class="login-intro">Informe o CEP para calcular o frete e ver o total final do pedido.</p>
+            <div class="checkout-summary"><span>Subtotal</span><strong id="checkoutSubtotal">R$ 0,00</strong><span>Desconto NALOGES (3%)</span><strong id="checkoutDiscount">− R$ 0,00</strong><span>Frete</span><strong id="checkoutShipping">A calcular</strong><span class="checkout-grand-label">Total final</span><strong class="checkout-grand" id="checkoutTotal">R$ 0,00</strong></div>
+            <label class="checkout-cep-label" for="checkoutCepInput">CEP de entrega</label>
+            <div class="checkout-cep-row"><input id="checkoutCepInput" inputmode="numeric" maxlength="9" placeholder="00000-000" aria-label="CEP de entrega" /><button id="calculateCheckoutShipping">Calcular frete</button></div>
+            <div class="payment-section">
+              <p class="checkout-cep-label">Forma de pagamento</p>
+              <div class="payment-methods" role="radiogroup" aria-label="Forma de pagamento">
+                <label class="payment-option selected"><input type="radio" name="paymentMethod" value="card" checked /> <span><strong>Cartão</strong><small>Crédito ou débito</small></span></label>
+                <label class="payment-option"><input type="radio" name="paymentMethod" value="pix" /> <span><strong>PIX</strong><small>Aprovação imediata</small></span></label>
+                <label class="payment-option"><input type="radio" name="paymentMethod" value="boleto" /> <span><strong>Boleto</strong><small>Vencimento em 2 dias</small></span></label>
+              </div>
+              <div class="card-fields" id="cardFields">
+                <label>Nome no cartão<input id="cardName" autocomplete="cc-name" placeholder="Nome completo" /></label>
+                <label>Número do cartão<input id="cardNumber" inputmode="numeric" autocomplete="cc-number" maxlength="19" placeholder="0000 0000 0000 0000" /></label>
+                <div class="card-row"><label>Validade<input id="cardExpiry" inputmode="numeric" maxlength="5" placeholder="MM/AA" /></label><label>CVV<input id="cardCvv" inputmode="numeric" maxlength="4" placeholder="000" /></label></div>
+              </div>
+              <div class="pix-fields" id="pixFields" hidden>
+                <p class="pix-title">PIX copia e cola</p>
+                <p class="pix-description">Copie a chave PIX abaixo e use no aplicativo do seu banco para realizar o pagamento.</p>
+                <div class="pix-qr-wrap">
+                  <img id="pixQrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;margin=8&amp;data=48815282890" alt="QR Code para pagamento via PIX" />
+                  <span>Aponte a câmera do banco<br />para este QR Code</span>
+                </div>
+                <div class="pix-code-row"><input id="pixCode" readonly value="48815282890" aria-label="Chave PIX copia e cola" /><button id="copyPixCode">Copiar</button></div>
+                <span class="pix-demo-note">Chave PIX informada pelo lojista. Esta tela ainda é demonstrativa e não confirma o pagamento automaticamente.</span>
+              </div>
+              <p class="payment-hint" id="paymentHint">Os dados são demonstrativos e não serão cobrados.</p>
+            </div>
+            <button class="button button-lime checkout-confirm" id="confirmPurchase">Confirmar pedido <span>↗</span></button>
+          </section>
+        </div>
+        <div class="admin-modal" id="adminModal" aria-hidden="true">
+          <div class="login-backdrop" id="adminClose"></div>
+          <section class="admin-panel" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+            <button class="close-button login-close" id="adminCloseButton" aria-label="Fechar painel administrador">×</button>
+            <div class="admin-heading"><div><p class="mono-label">Painel privado / NALOGES</p><h2 id="adminTitle">Olá, Natália.<br /><em>Sua loja.</em></h2><p class="admin-welcome">Aqui você acompanha os pedidos e cuida de cada detalhe da NALOGES.</p></div><div class="admin-identity"><span class="admin-avatar">N</span><span><strong>Natália</strong><small>Administradora</small></span><span class="admin-live"><i></i> Loja online</span></div></div>
+            <div class="admin-stats"><div><span>Pedidos concluídos</span><strong id="adminOrders">0</strong></div><div><span>Faturamento</span><strong id="adminRevenue">R$ 0,00</strong></div><div><span>Produtos ativos</span><strong id="adminProducts">0</strong></div></div>
+            <div class="admin-content">
+              <div class="admin-block"><div class="admin-block-heading"><h3>Quem comprou</h3><span>Pedidos recentes</span></div><div id="adminOrdersList"><p class="admin-empty">Nenhum pedido concluído ainda.</p></div></div>
+              <div class="admin-block"><div class="admin-block-heading"><h3>Ações rápidas</h3></div><div class="admin-actions"><button id="adminCatalogAction">Ver catálogo <span>↗</span></button><button id="adminLookAction">Abrir Monte seu look <span>↗</span></button><button id="adminClearOrders">Limpar histórico demonstrativo <span>×</span></button></div></div>
+            </div>
+            <p class="admin-note">Painel demonstrativo local. Para uso real, conecte autenticação, banco de dados e gateway de pagamentos.</p>
+          </section>
+        </div>
+      </aside>
+    </div>
+    <div class="login-modal" id="loginModal" aria-hidden="true">
+      <div class="login-backdrop" id="loginClose"></div>
+      <section class="login-panel" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="close-button login-close" id="loginCloseButton" aria-label="Fechar tela de login">×</button>
+        <p class="mono-label">Área do cliente / NALOGES</p>
+        <h2 id="loginTitle">Entre no seu<br /><em>momento.</em></h2>
+        <p class="login-intro">Acesse sua conta para acompanhar pedidos, salvar seus favoritos e finalizar sua bag.</p>
+        <form id="loginForm" novalidate>
+          <label>E-mail<input id="emailInput" type="email" autocomplete="email" placeholder="voce@email.com" required /></label>
+          <label>CPF<input id="cpfInput" inputmode="numeric" autocomplete="username" placeholder="000.000.000-00" maxlength="14" required /></label>
+          <label>Crie uma senha<input id="passwordInput" type="password" autocomplete="new-password" placeholder="Mínimo de 6 caracteres" minlength="6" required /></label>
+          <p class="form-error" id="formError" role="alert"></p>
+          <button class="button button-lime login-submit" type="submit">Criar acesso e entrar <span>↗</span></button>
+        </form>
+        <small class="login-note">Seus dados ficam seguros nesta demonstração. Nenhuma compra real é processada.</small>
+      </section>
+    </div>
+    <div class="login-modal admin-login-modal" id="adminLoginModal" aria-hidden="true">
+      <div class="login-backdrop" id="adminLoginClose"></div>
+      <section class="login-panel" role="dialog" aria-modal="true" aria-labelledby="adminLoginTitle">
+        <button class="close-button login-close" id="adminLoginCloseButton" aria-label="Fechar acesso administrativo">×</button>
+        <p class="mono-label">Acesso da administradora / NALOGES</p>
+        <h2 id="adminLoginTitle">Olá,<br /><em>Natália.</em></h2>
+        <p class="login-intro">Digite seu nome, CPF e senha para entrar no painel da sua loja.</p>
+        <form id="adminLoginForm" novalidate>
+          <label>Seu nome<input id="adminNameInput" type="text" autocomplete="name" placeholder="Natália" required /></label>
+          <label>CPF<input id="adminCpfInput" inputmode="numeric" autocomplete="username" placeholder="000.000.000-00" maxlength="14" required /></label>
+          <label>Sua senha<input id="adminPasswordInput" type="password" autocomplete="current-password" placeholder="Mínimo de 6 caracteres" minlength="6" required /></label>
+          <p class="form-error" id="adminFormError" role="alert"></p>
+          <button class="button button-lime login-submit" type="submit">Entrar no painel <span>↗</span></button>
+        </form>
+        <small class="login-note">Demonstração local: os dados ficam somente neste navegador.</small>
+      </section>
+    </div>
+    <div class="purchases-modal" id="purchasesModal" aria-hidden="true">
+      <div class="login-backdrop" id="purchasesClose"></div>
+      <section class="purchases-panel" role="dialog" aria-modal="true" aria-labelledby="purchasesTitle">
+        <button class="close-button login-close" id="purchasesCloseButton" aria-label="Fechar minhas compras">×</button>
+        <p class="mono-label">Área do cliente / NALOGES</p>
+        <h2 id="purchasesTitle">Minhas<br /><em>compras.</em></h2>
+        <button class="button button-lime purchases-look-button" id="purchasesLookButton">Montar meu look <span>↗</span></button>
+        <div id="purchaseHistory"><div class="empty-purchases"><span>✳</span><p>Você ainda não concluiu nenhuma compra.</p><small>Quando finalizar um pedido, ele aparecerá aqui.</small></div></div>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="theme.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

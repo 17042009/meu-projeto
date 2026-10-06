@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Administração · NALOGES</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="admin-page">
+    <div class="access-bar">
+      <span class="access-label">Acesso</span>
+      <div class="access-options">
+        <a class="access-link" href="index.html">Área do cliente</a>
+        <a class="access-link current" href="admin.html" aria-current="page">Área do administrador</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ativar modo claro">Modo claro</button>
+      </div>
+    </div>
+    <header class="admin-page-header">
+      <a class="wordmark" href="index.html">NALOGES</a>
+      <span class="mono-label">Área reservada / Natália</span>
+      <a class="admin-back-link" href="index.html">Voltar para a loja ↗</a>
+    </header>
+    <main>
+      <section class="admin-gate" id="adminGate" aria-labelledby="adminGateTitle">
+        <p class="mono-label">Acesso da administradora</p>
+        <h1 id="adminGateTitle">Olá,<br /><em>Natália.</em></h1>
+        <p>Entre com seu nome, CPF e senha para acessar a administração da NALOGES.</p>
+        <form id="adminPageLogin" novalidate>
+          <label>Nome<input id="pageAdminName" type="text" autocomplete="name" placeholder="Natália" required /></label>
+          <label>CPF<input id="pageAdminCpf" inputmode="numeric" autocomplete="username" placeholder="000.000.000-00" maxlength="14" required /></label>
+          <label>Senha<input id="pageAdminPassword" type="password" autocomplete="current-password" minlength="6" required /></label>
+          <p class="admin-error" id="adminPageError" role="alert"></p>
+          <button class="button button-lime" type="submit">Entrar na administração <span>↗</span></button>
+        </form>
+        <small>Proteção demonstrativa local. Para impedir acesso real, conecte esta página a um servidor com autenticação.</small>
+      </section>
+      <section class="admin-dashboard" id="adminDashboard" hidden aria-labelledby="adminDashboardTitle">
+        <div class="admin-dashboard-top">
+          <div><p class="mono-label">Painel de controle / NALOGES</p><h1 id="adminDashboardTitle">Sua loja,<br /><em>Natália.</em></h1></div>
+          <button class="admin-logout" id="adminLogout">Sair da área ↗</button>
+        </div>
+        <p class="admin-welcome">Acompanhe quem comprou, consulte os pedidos e veja a saúde da sua loja.</p>
+        <div class="admin-stats-page"><div><span>Pedidos concluídos</span><strong id="pageOrders">0</strong></div><div><span>Faturamento</span><strong id="pageRevenue">R$ 0,00</strong></div><div><span>Produtos ativos</span><strong id="pageProducts">16</strong></div></div>
+        <div class="admin-dashboard-grid">
+          <section class="admin-table-block"><div class="admin-block-heading"><h2>Quem comprou</h2><span>Pedidos recentes</span></div><div id="pageOrdersList"><p class="admin-empty">Nenhum pedido concluído ainda.</p></div></section>
+          <section class="admin-table-block"><div class="admin-block-heading"><h2>Acesso rápido</h2></div><a class="admin-action-link" href="index.html#catalogo">Ver catálogo <span>↗</span></a><a class="admin-action-link" href="index.html#monte-seu-look">Abrir Monte seu look <span>↗</span></a><button class="admin-action-link danger" id="pageClearOrders">Limpar histórico local <span>×</span></button></section>
+        </div>
+      </section>
+    </main>
+    <script src="theme.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
